@@ -12,8 +12,14 @@ Usage:
 """
 
 import argparse
+import os
 import sys
 from pathlib import Path
+
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
 try:
     from pymongo import MongoClient, InsertOne
@@ -25,10 +31,13 @@ except ImportError:
     )
 
 # ── Defaults ────────────────────────────────────────────────────────────────
-DEFAULT_URI        = "mongodb+srv://faizullahbalti29_db_user:694um0P9D4hOrXtH@cluster0.gjq6gnv.mongodb.net/results-analyzer?appName=Cluster0"
-DEFAULT_DB         = "results-analyzer"
-DEFAULT_COLLECTION = "tenth"
-DEFAULT_FILE       = "results-analyzer.tenth.json"
+if load_dotenv is not None:
+    load_dotenv()
+
+DEFAULT_URI        = os.getenv("DB_URI", "abc")
+DEFAULT_DB         = os.getenv("DB_NAME", "results-analyzer")
+DEFAULT_COLLECTION = os.getenv("DB_COLLECTION", "tenth")
+DEFAULT_FILE       = os.getenv("DB_FILE", "results-analyzer.tenth.json")
 
 
 def parse_args() -> argparse.Namespace:

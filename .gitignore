@@ -11,3 +11,5 @@ env/
 *.egg-info/
 dist/
 build/
+.env
+9th-result-pages.pdf
