@@ -12,7 +12,7 @@ from typing import Optional, List, Dict, Any, Tuple
 import fitz  # pymupdf
 
 # ------------------------------------------------------------------
-PDF_PATH = r"C:\Users\BOSS\Downloads\analyze-result-master\10th-result-pages.pdf"
+PDF_PATH = "9th-result-pages.pdf"
 OUTPUT_JSON = "students.json"
 OUTPUT_JSONL = "students.jsonl"
 # ------------------------------------------------------------------

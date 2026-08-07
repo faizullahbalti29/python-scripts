@@ -34,10 +34,10 @@ except ImportError:
 if load_dotenv is not None:
     load_dotenv()
 
-DEFAULT_URI        = os.getenv("DB_URI", "abc")
-DEFAULT_DB         = os.getenv("DB_NAME", "results-analyzer")
-DEFAULT_COLLECTION = os.getenv("DB_COLLECTION", "tenth")
-DEFAULT_FILE       = os.getenv("DB_FILE", "results-analyzer.tenth.json")
+DEFAULT_URI        = os.getenv("DB_URI")
+DEFAULT_DB         = os.getenv("DB_NAME")
+DEFAULT_COLLECTION =  "nineth"
+DEFAULT_FILE       = "students.json"
 
 
 def parse_args() -> argparse.Namespace:
