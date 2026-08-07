@@ -13,5 +13,7 @@ dist/
 build/
 .env
 9th-result-pages.pdf
+10th-result-pages.pdf
+
 students.json
 students.jsonl
