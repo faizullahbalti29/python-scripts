@@ -95,11 +95,17 @@ def is_institution_line(line: str) -> bool:
 
     # Must contain at least one strong school keyword
     strong_keywords = (
-        "SCHOOL", "COLLEGE", "ACADEMY", "INSTITUTE", "MADRAS", "MADRASA",
-        "JAMIA", "UNIVERSITY", "CAMPUS", "FOUNDATION", "CADET",
-        "HIGHER SECONDARY", "PUBLIC SCHOOL", "GOVT", "GOVERNMENT",
-        "ARMY PUBLIC", "OPF PUBLIC", "FATIMIYAH", "RIGHT SCHOOL",
-        "F.G.", "FG ", "TCF"
+       "SCHOOL", "COLLEGE", "EDUCATORS", "MADRISSA", "MADRASSAH",
+    "ACADEMY", "INSTITUTE", "PUBLIC", "MODEL", "GRAMMAR", "EDUCATION",
+    "HIGHER", "SECONDARY", "SYSTEM", "SYSTEMS", "APS", "BOYS", "GIRLS",
+    "SCHOOLS", "EDUCATIONAL", "EDUCATIONALS", "CAMPUS", "INSTITUITE",
+    "EX-PRIVATE CANDIDATES", "EX PRIVATE CANDIDATES", "ALJAMIA", "JAMIA",
+    "EDUCASIA", "JAMIATUL", "EDUCATOR", "CENTRE", "DAR", "ULOOM",
+    "LEARNING", "FOUNDATION", "UNIVERSITY", "BLOOMFIELD", "IQRA",
+    "MADRASA", "AKADEMIE", "ACADMY", "ADVANCED", "STUDIES", "COLLEGIATE",
+    "SCIENCES", "SCHOOLZ", "CADETCOLLEGE", "SCHOOLING", "TCF", "ISLAMABAD",
+    "CANTT", "DISTT", "TEHSIL", "GOVT", "GOVERNMENT", "FG", "F.G.",
+    "ARMY", "OPF", "FATIMIYAH", "RIGHT SCHOOL"
     )
     if not any(kw in line_upper for kw in strong_keywords):
         return False
