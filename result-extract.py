@@ -99,7 +99,7 @@ def is_institution_line(line: str) -> bool:
         "JAMIA", "UNIVERSITY", "CAMPUS", "FOUNDATION", "CADET",
         "HIGHER SECONDARY", "PUBLIC SCHOOL", "GOVT", "GOVERNMENT",
         "ARMY PUBLIC", "OPF PUBLIC", "FATIMIYAH", "RIGHT SCHOOL",
-        "F.G.", "FG ", "TCF"
+        "F.G.", "FG ", "TCF","AKADEMIE", "ACADMY"
     )
     if not any(kw in line_upper for kw in strong_keywords):
         return False
